@@ -75,7 +75,7 @@ def conv_ref_en(fl, e1, e0, gamma):
     return np.asarray(fl) * (e1/e0)**(2.-gamma)
 
 import pickle
-with open('./gfu_offline_transient_sens_100tev.pkl', 'wb') as f:
+with open('./dump/gfu_offline_transient_sens_100tev.pkl', 'wb') as f:
     pickle.dump(all_gamma_results, f)
 
 class GFUOnlineDataSpecs(object):
@@ -166,5 +166,5 @@ for gamma in inj_gamma:
             
         all_gamma_results_online[gamma][sd] = results
 
-with open('./gfu_online_transient_sens_100tev.pkl', 'wb') as f:
+with open('./dump/gfu_online_transient_sens_100tev.pkl', 'wb') as f:
     pickle.dump(all_gamma_results_online, f)

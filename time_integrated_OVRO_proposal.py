@@ -95,6 +95,6 @@ def conv_ref_en(fl, e1, e0, gamma):
     return np.asarray(fl) * (e1/e0)**(2.-gamma)
 
 import pickle
-with open('./gfu_offline_sens_100tev_ovro_proposal_{}.pkl'.format(time_str), 'wb') as f:
+with open('./dump/gfu_offline_sens_100tev_ovro_proposal_{}.pkl'.format(time_str), 'wb') as f:
     pickle.dump(all_gamma_results, f)
 
